@@ -23,13 +23,28 @@ export function Post () {
             <div className="mt-6 space-y-4 text-PostTextColor">
                 <p>Fala Dev!</p>
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis, iusto? Enim animi accusamus ducimus aliquam iure laborum sed, cum nulla ullam tenetur commodi possimus dolor asperiores error repudiandae id libero.</p>
-                <p>👉 <a className="font-bold text-BrandGreenIgnite hover:text-BrandGreenIgniteLight" href="">wallauer@protonmail.com</a></p>
+                <p>👉 <a className="font-bold text-BrandGreenIgnite hover:text-BrandGreenIgniteLight focus:outline outline-1 outline-BrandGreenIgnite" href="">wallauer@protonmail.com</a></p>
                 <p className="flex gap-1">
-                    <a className="font-bold text-BrandGreenIgnite hover:text-BrandGreenIgniteLight" href=""> #novoprojeto</a>
-                    <a className="font-bold text-BrandGreenIgnite hover:text-BrandGreenIgniteLight" href="">#nlw</a>
-                    <a className="font-bold text-BrandGreenIgnite hover:text-BrandGreenIgniteLight" href="">#rocketseat</a>
+                    <a className="font-bold text-BrandGreenIgnite hover:text-BrandGreenIgniteLight focus:outline outline-1 outline-BrandGreenIgnite" href=""> #novoprojeto</a>
+                    <a className="font-bold text-BrandGreenIgnite hover:text-BrandGreenIgniteLight focus:outline outline-1 outline-BrandGreenIgnite" href="">#nlw</a>
+                    <a className="font-bold text-BrandGreenIgnite hover:text-BrandGreenIgniteLight focus:outline outline-1 outline-BrandGreenIgnite" href="">#rocketseat</a>
                 </p>
             </div>
+            <form className="max-h-none border-t border-BorderGrey w-full mt-6 pt-6 space-y-4">
+                <strong className="text-MainColorText leading-6">Deixe seu feedback</strong>
+                <textarea
+                    className="w-full h-24 bg-NeutralGrey border-none resize-none p-4 rounded-lg text-PostTextColor leading-[1.4rem] focus:outline outline-1 outline-BrandGreenIgnite"
+                    placeholder="Escreva um comentário..."
+                />
+                <footer id="formButton">
+                    <button
+                        className="py-4 px-6 rounded-lg font-bold bg-BrandGreenIgnite hover:bg-BrandGreenIgniteLight transition duration-100 cursor-pointer focus:outline outline-1 outline-BrandGreenIgnite" 
+                        type="submit"
+                    >
+                        Pulbicar
+                    </button>
+                </footer>
+            </form>
         </article>
     );
 }
