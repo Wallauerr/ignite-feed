@@ -1,3 +1,5 @@
+import { Comment } from "./Comment";
+
 export function Post () {
     return (
         <article className="bg-PlatformGrey rounded-lg p-10">
@@ -41,10 +43,13 @@ export function Post () {
                         className="py-4 px-6 rounded-lg font-bold bg-BrandGreenIgnite hover:bg-BrandGreenIgniteLight transition duration-100 cursor-pointer focus:outline outline-1 outline-BrandGreenIgnite" 
                         type="submit"
                     >
-                        Pulbicar
+                        Publicar
                     </button>
                 </footer>
             </form>
+            <div>
+                <Comment />
+            </div>
         </article>
     );
 }

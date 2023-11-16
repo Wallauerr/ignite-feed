@@ -14,7 +14,7 @@ export function App() {
             content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione numquam temporibus, laborum incidunt veniam enim sunt debitis tempore natus, repellendus fugiat, consectetur id at? Possimus tenetur vitae in est! Excepturi." 
           />
           <Post 
-            author="Lucas Pope"
+            author="Douglas Rafael"
             content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque quo ullam reiciendis asperiores illo ratione beatae delectus, aut sed quod? Modi cum doloribus fuga repellat alias consectetur molestias ab odit!"
           />
         </main>
