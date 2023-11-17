@@ -2,13 +2,3 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-#formButton {
-    visibility: hidden;
-    max-height: 0;
-}
-
-:focus-within #formButton {
-    visibility: visible;
-    max-height: none;
-}

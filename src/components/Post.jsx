@@ -38,7 +38,7 @@ export function Post () {
                     className="w-full h-24 bg-NeutralGrey border-none resize-none p-4 rounded-lg text-PostTextColor leading-[1.4rem] focus:outline outline-1 outline-BrandGreenIgnite"
                     placeholder="Escreva um comentário..."
                 />
-                <footer id="formButton">
+                <footer className="">
                     <button
                         className="py-4 px-6 rounded-lg font-bold bg-BrandGreenIgnite hover:bg-BrandGreenIgniteLight transition duration-100 cursor-pointer focus:outline outline-1 outline-BrandGreenIgnite" 
                         type="submit"

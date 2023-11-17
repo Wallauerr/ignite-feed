@@ -12,6 +12,7 @@ export default {
       colors:{
         NeutralGrey: "#121214",
         PlatformGrey: "#202024",
+        CommentBoxGray: "#29292E",
         BorderGrey: "#323238",
         PostTextColor: "#C4C4CC",
         SpanTextColor: "#8D8D99",
