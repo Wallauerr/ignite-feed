@@ -1,15 +1,16 @@
 import { PencilSimpleLine } from "phosphor-react"
+import { Avatar } from "./Avatar";
 
 export function Sidebar () {
     return (
-        <aside className="w-64 bg-PlatformGrey rounded-lg overflow-hidden">
+        <aside className="2xl:w-64 sm:max-w-none bg-PlatformGrey rounded-lg overflow-hidden">
             <img 
                 className="w-full h-[72px] object-cover"
                 src="https://images.unsplash.com/photo-1607743386760-88ac62b89b8a?q=50&w=500&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             />
             <div className="flex flex-col items-center -mt-8">
-                <img 
-                    className="box-content w-12 h-12 rounded-lg border-4 border-PlatformGrey outline outline-2 outline-BrandGreenIgnite"
+                <Avatar
+                    hasBorder={true} 
                     src="https://avatars.githubusercontent.com/u/79984765?v=4"
                 />
                 <strong className="text-MainColorText mt-4 leading-6">Vinícius Wallauer</strong>

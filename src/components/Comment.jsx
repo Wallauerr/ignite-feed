@@ -1,12 +1,12 @@
 import { ThumbsUp, Trash } from "phosphor-react";
+import { Avatar } from "./Avatar";
 
 export function Comment () {
     return (
         <div className="flex gap-4 mt-6">
-            <img 
-                className="w-12 h-12 rounded-lg"
-                src="https://avatars.githubusercontent.com/u/142635021?v=4" 
-                alt="" 
+            <Avatar 
+                hasBorder={false} 
+                src="https://avatars.githubusercontent.com/u/142635021?v=4"
             />
             <div className="flex-1">
                 <div className="bg-CommentBoxGray rounded-lg p-4">
@@ -31,9 +31,9 @@ export function Comment () {
                     <p className="mt-4 text-MainColorText">Muito bom Wallauer, parabéns!! 👏👏</p>
                 </div>
                 <footer className="mt-4">
-                    <button className="flex items-center text-SpanTextColor cursor-pointer focus:outline outline-1 outline-BrandGreenIgnite hover:text-BrandGreenIgnite">
+                    <button className="flex items-center text-SpanTextColor cursor-pointer focus:outline outline-1 outline-BrandGreenIgnite hover:text-BrandGreenIgnite transition duration-100">
                         <ThumbsUp className="mr-2"/>
-                        Aplaudir <span className="before:px-1">20</span>
+                        Aplaudir <span className="px-2">20</span>
                     </button>
                 </footer>
             </div>

@@ -1,3 +1,4 @@
+import { Avatar } from "./Avatar";
 import { Comment } from "./Comment";
 
 export function Post () {
@@ -5,8 +6,8 @@ export function Post () {
         <article className="bg-PlatformGrey rounded-lg p-10">
             <header className="flex items-center justify-between">
                 <div className="flex items-center gap-5">
-                    <img 
-                        className="box-content w-12 h-12 rounded-lg border-4 border-PlatformGrey outline outline-2 outline-BrandGreenIgnite"
+                    <Avatar 
+                        hasBorder={true} 
                         src="https://avatars.githubusercontent.com/u/79984765?v=4"
                     />
                     <div>

@@ -6,9 +6,9 @@ export function App() {
   return (
     <div>
       <Header />
-      <div className="max-w-6xl my-8 mx-auto px-4 grid grid-cols-4 gap-8 items-start">
+      <div className="2xl:max-w-6xl 2xl:grid-cols-4 xl:max-w-6xl xl:grid-cols-4 lg:max-w-6xl lg:grid-cols-4 md:max-w-none md:grid-cols-1 sm:max-w-none sm:grid-cols-1 my-8 mx-auto px-4 grid gap-8 items-start">
         <Sidebar />
-        <main className="col-span-3 flex flex-col gap-y-8">
+        <main className="2xl:col-span-3 xl:col-span-3 lg:col-span-3 flex flex-col gap-y-8">
           <Post 
             author="Vinícius Wallauer" 
             content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione numquam temporibus, laborum incidunt veniam enim sunt debitis tempore natus, repellendus fugiat, consectetur id at? Possimus tenetur vitae in est! Excepturi." 
