@@ -3,7 +3,7 @@ import { Avatar } from "./Avatar";
 
 export function Sidebar () {
     return (
-        <aside className="2xl:w-64 sm:max-w-none bg-PlatformGrey rounded-lg overflow-hidden">
+        <aside className="2xl:w-64 bg-PlatformGrey rounded-lg overflow-hidden">
             <img 
                 className="w-full h-[72px] object-cover"
                 src="https://images.unsplash.com/photo-1607743386760-88ac62b89b8a?q=50&w=500&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
