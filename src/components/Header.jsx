@@ -8,6 +8,7 @@ export function Header () {
                 alt="Logotipo do Ignite"
                 className="h-12"
             />
+            
             <strong className="text-white text-2xl font-bold">Ignite Feed</strong>
         </div>
     );
