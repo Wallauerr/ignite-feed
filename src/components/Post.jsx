@@ -68,9 +68,9 @@ export function Post ({ author, publishedAt, content }) {
       <div className="mt-6 space-y-4 text-PostTextColor">
         {content.map(line => {
           if (line.type === 'paragraph') {
-            return <p>{line.content}</p>
+            return <p key={line.content}>{line.content}</p>
           } else if (line.type === 'link') {
-            return <p>
+            return <p key={line.content}>
                       <a 
                         className="font-bold text-BrandGreenIgnite hover:text-BrandGreenIgniteLight focus:outline outline-1 outline-BrandGreenIgnite" 
                         href="#"
@@ -111,7 +111,7 @@ export function Post ({ author, publishedAt, content }) {
 
       <div>
         {comments.map(comment => {
-          return <Comment content={comment}/>
+          return <Comment key={comment} content={comment}/>
         })}
       </div>
     </article>
