@@ -38,7 +38,12 @@ export function Post ({ author, publishedAt, content }) {
   }
 
   function handleNewCommentChange() {
+    event.target.setCustomValidity('');
     setNewCommentText(event.target.value);
+  }
+
+  function handleNewCommentInvalid() {
+    event.target.setCustomValidity('Esse campo é obrigatório!');
   }
 
   function deleteComment(commentToDelete) {
@@ -49,12 +54,14 @@ export function Post ({ author, publishedAt, content }) {
     setComments(commentsWithoutDeleteOne);
   }
 
+  const isNewCommentEmpty = newCommentText.length === 0;
+
   return (
     <article className="bg-PlatformGrey rounded-lg p-10">
       <header className="flex items-center justify-between">
         <div className="flex items-center gap-5">
           <Avatar 
-            hasBorder={true} 
+            hasBorder
             src={author.avatarURL}
           />
 
@@ -105,11 +112,14 @@ export function Post ({ author, publishedAt, content }) {
             handleTextChange(e);
             handleNewCommentChange(e);
           }}
+          onInvalid={handleNewCommentInvalid}
+          required
         />
         
         <footer className={`${isButtonEnable ? 'block' : 'invisible max-h-0'}`}>
           <button
-            className="py-4 px-6 rounded-lg font-bold bg-BrandGreenIgnite hover:bg-BrandGreenIgniteLight transition duration-100 cursor-pointer focus:outline outline-1 outline-BrandGreenIgnite"
+            className="py-4 px-6 rounded-lg font-bold bg-BrandGreenIgnite hover:bg-BrandGreenIgniteLight transition duration-100 cursor-pointer focus:outline outline-1 outline-BrandGreenIgnite disabled:opacity-30 disabled:cursor-not-allowed"
+            disabled={isNewCommentEmpty}
             type="submit"
           >
             Publicar

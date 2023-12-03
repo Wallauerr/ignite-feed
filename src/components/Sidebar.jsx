@@ -11,7 +11,7 @@ export function Sidebar () {
 
 			<div className="flex flex-col items-center -mt-8">
 				<Avatar
-					hasBorder={true} 
+					hasBorder
 					src="https://avatars.githubusercontent.com/u/79984765?v=4"
 				/>
 				<strong className="text-MainColorText mt-4 leading-6">Vinícius Wallauer</strong>
