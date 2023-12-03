@@ -1,7 +1,11 @@
 import { ThumbsUp, Trash } from "phosphor-react";
 import { Avatar } from "./Avatar";
 
-export function Comment ({ content }) {
+export function Comment ({ content, onDeleteComment }) {
+  function handleDeleteComment() {
+    onDeleteComment(content);
+  }
+
   return (
     <div className="flex gap-4 mt-4">
       <Avatar 
@@ -23,7 +27,8 @@ export function Comment ({ content }) {
               </time>
             </div>
 
-            <button 
+            <button
+              onClick={handleDeleteComment} 
               className="focus:outline outline-1 text-SpanTextColor outline-BrandGreenIgnite hover:text-red-400"
               title="Deletar comentário"
             >
