@@ -7,16 +7,19 @@ import { Comment } from "./Comment";
 import { useState } from 'react';
 
 export function Post ({ author, publishedAt, content }) {
-  const [ comment, setComment ] = useState('')
+  const [ text, setText ] = useState('')
+
   const [ comments, setComments ] = useState([
-    1,
+    "Muito bom Wallauer, parabéns!! 👏👏"
   ])
 
-  const handleCommentChange = (event) => {
-    setComment(event.target.value)
+  const [newCommentText, setNewCommentText] = useState('')
+
+  const handleTextChange = (event) => {
+    setText(event.target.value);
   }
 
-  const isButtonEnable = comment.length >= 3
+  const isButtonEnable = text.length >= 3
 
   const publishedDateFormatted = format(publishedAt, "d 'de' LLLL 'às' HH:mm'h'", {
     locale: ptBR
@@ -28,9 +31,14 @@ export function Post ({ author, publishedAt, content }) {
   })
 
   function handleCreateNewComment() {
-    event.preventDefault()
+    event.preventDefault();
 
-    setComments([...comments, comments.length + 1]);
+    setComments([...comments, newCommentText]);
+    setNewCommentText('');
+  }
+
+  function handleNewCommentChange() {
+    setNewCommentText(event.target.value);
   }
 
   return (
@@ -82,9 +90,13 @@ export function Post ({ author, publishedAt, content }) {
 
         <textarea
           className={`w-full h-24 bg-NeutralGrey border-none resize-none p-4 rounded-lg text-PostTextColor leading-[1.4rem] focus:outline outline-1 outline-BrandGreenIgnite`}
+          name='comment'
           placeholder="Escreva um comentário..."
-          value={comment}
-          onChange={handleCommentChange}
+          value={newCommentText}
+          onChange={(e) => {
+            handleTextChange(e);
+            handleNewCommentChange(e);
+          }}
         />
         
         <footer className={`${isButtonEnable ? 'block' : 'invisible max-h-0'}`}>
@@ -99,7 +111,7 @@ export function Post ({ author, publishedAt, content }) {
 
       <div>
         {comments.map(comment => {
-          return <Comment/>
+          return <Comment content={comment}/>
         })}
       </div>
     </article>
