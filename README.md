@@ -1,4 +1,4 @@
-# Shorts Summary
+# Ignite Feed
 
 ![Capa do projeto](./public/project-cover.png)
 
